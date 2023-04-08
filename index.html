@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/edec7f25e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center m-5">Time Table</h1>
+      <!--form-->
+      <div class="row form-container">
+        <div
+          class="col-md-4 text-center bg-light text-dark p-3"
+          id="time-container"
+        >
+          <label for="time">Time</label>
+          <input class="form-control text-center" type="text" id="time" />
+          <button class="btn btn-info mt-3 px-5" id="change-time">
+            Change time
+          </button>
+          <button class="btn btn-info mt-3 px-5" id="add-time">Add Time</button>
+          <button
+            class="btn btn-dark mt-3 px-5"
+            id="timeback-button"
+            type="submit"
+          >
+            Back <i class="fas fa-backspace fa-lg"></i>
+          </button>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="container bg-light text-dark p-3 rounded">
+            <div class="form-group text-center">
+              <div class="row text-left">
+                <div class="col" id="subject-container">
+                  <label for="subject">Subject</label>
+                  <input class="form-control" type="text" id="subject" />
+                </div>
+
+                <div class="col" id="day-container">
+                  <label for="day">Day</label>
+                  <div>
+                    <select name="days" id="day" class="form-control">
+                      <option value="monday">Monday</option>
+                      <option value="tuesday">Tuesday</option>
+                      <option value="wednesday">Wednesday</option>
+                      <option value="thursday">Thursday</option>
+                      <option value="friday">Friday</option>
+                      <option value="saturday">Saturday</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-info mt-3 px-5" id="change-subject">
+                Change subject
+              </button>
+              <button class="btn btn-info mt-3 px-5" id="add-subject">
+                Add Subject
+              </button>
+              <button
+                class="btn btn-dark mt-3 px-5"
+                id="subjectback-button"
+                type="submit"
+              >
+                Back <i class="fas fa-backspace fa-lg"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Table-->
+      <div class="container p-5">
+        <table class="table table-light table-striped text-center">
+          <thead class="thead-dark">
+            <tr id="table-time">
+              <th scope="col" class="text-uppercase bg-light"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="days" id="monday">
+              <th scope="row" class="text-uppercase">Monday</th>
+            </tr>
+            <tr class="days" id="tuesday">
+              <th scope="row" class="text-uppercase">Tuesday</th>
+            </tr>
+            <tr class="days" id="wednesday">
+              <th scope="row" class="text-uppercase">Wednesday</th>
+            </tr>
+            <tr class="days" id="thursday">
+              <th scope="row" class="text-uppercase">Thursday</th>
+            </tr>
+            <tr class="days" id="friday">
+              <th scope="row" class="text-uppercase">Friday</th>
+            </tr>
+            <tr class="days" id="saturday">
+              <th scope="row" class="text-uppercase">Saturday</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
